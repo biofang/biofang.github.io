@@ -414,6 +414,9 @@
           
 
   
+	<div id="gitalk-container"></div>
+		
+  
 
 
 
@@ -697,6 +700,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'bd0340be4c24fda562b2',
+          clientSecret: '009eb5062ff9a603d3092166acdd8e7669e96257',
+          repo: 'biofang.github.io',
+          owner: 'biofang',
+          admin: ['biofang'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
