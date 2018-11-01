@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://biofang.github.io/tags/index.html</loc>
+    
+    <lastmod>2018-11-01T06:35:26.867Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://biofang.github.io/categories/index.html</loc>
+    
+    <lastmod>2018-11-01T06:34:18.821Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://biofang.github.io/2018/11/01/test-articel/</loc>
     
-    <lastmod>2018-11-01T04:31:50.157Z</lastmod>
+    <lastmod>2018-11-01T06:21:57.771Z</lastmod>
     
   </url>
   
@@ -19,13 +33,6 @@
     <loc>https://biofang.github.io/about/index.html</loc>
     
     <lastmod>2018-10-31T15:51:42.620Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://biofang.github.io/tags/index.html</loc>
-    
-    <lastmod>2018-10-31T15:50:28.789Z</lastmod>
     
   </url>
   
