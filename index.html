@@ -293,6 +293,163 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://biofang.github.io/2020/04/02/kaks计算/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="fang jian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/fig.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/02/kaks计算/" itemprop="url">kaks计算</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-02T22:06:49+08:00">
+                2020-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/生信/" itemprop="url" rel="index">
+                    <span itemprop="name">生信</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>简单多线程快速计算同源基因对kaks  </p>
+<h3 id="依赖工具"><a href="#依赖工具" class="headerlink" title="依赖工具"></a>依赖工具</h3><ul>
+<li>ParaAT2.0  </li>
+<li>KaKs_Calculator2.0  </li>
+</ul>
+<h3 id="ParaAT-使用说明"><a href="#ParaAT-使用说明" class="headerlink" title="ParaAT 使用说明"></a>ParaAT 使用说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/storage_wut/user/software/ParaAT2.0:$PATH</span><br><span class="line"></span><br><span class="line">cd /storage_wut/user/software/ParaAT2.0</span><br><span class="line"></span><br><span class="line">ParaAT.pl -h test.homologs -n test.cds -a test.pep -p proc -o output -f axt</span><br><span class="line">--------------------------------</span><br><span class="line">-h, 指定同源基因列表文件</span><br><span class="line">-n, 指定核酸序列文件</span><br><span class="line">-a, 指定蛋白序列文件</span><br><span class="line">-p, 指定多线程文件                      ## 文件中给定线程数，默认为6</span><br><span class="line">-m, 指定比对工具                        ## muscle</span><br><span class="line">-g, 去除比对有gap的密码子</span><br><span class="line">-k, 用KaKs_Calculator                   ## 计算kaks值</span><br><span class="line">-o, 输出结果的目录</span><br><span class="line">-f, 输出比对文件的格式</span><br></pre></td></tr></table></figure>
+<h3 id="计算-kaks"><a href="#计算-kaks" class="headerlink" title="计算 kaks"></a>计算 kaks</h3>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/02/kaks计算/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+	
+	
+	<div>
+       
+	</div>
+	  
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://biofang.github.io/2020/04/02/GO分类条形图/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1250,7 +1407,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1272,7 +1429,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1387,7 +1544,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3.9k字</span>
+  <span class="post-count">博客全站共4.5k字</span>
 </div>
         
 
