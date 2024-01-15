@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[TEST.txt]]></title>
-    <url>%2F2024%2F01%2F15%2FTEST-txt%2F</url>
-    <content type="text"><![CDATA[T1This is a test；]]></content>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[利用Pandas合并excel中的sheets]]></title>
     <url>%2F2021%2F04%2F30%2F%E5%88%A9%E7%94%A8Pandas%E5%90%88%E5%B9%B6excel%E4%B8%AD%E7%9A%84sheets%2F</url>
     <content type="text"><![CDATA[需求将两个excel文件（每个包含两个sheets）合并成每行为name，每列为patient的矩阵，都出csv，若没有值，用NA替代 脚本实现12345678910111213141516171819202122232425262728293031323334# -*- coding: utf-8 -*-&apos;&quot;&quot;&quot;Created on Sat Apr 24 17:49:57 2021@author: fangj&quot;&quot;&quot;#### Import Module ####import pandas as pdimport osimport timeimport mathfrom functools import reduce### merge 所有表格以及sheets ###def add_all_sheets(file_path): dfs= [] for parent, dirnames, filenames in os.walk(file_path): for filename in filenames: xls_file=pd.ExcelFile(os.path.join(parent, filename),engine=&apos;openpyxl&apos;) sheet_names = xls_file.sheet_names for i in sheet_names: df = pd.read_excel(os.path.join(parent, filename),sheet_name=i,engine=&apos;openpyxl&apos;) df.columns = [&apos;name&apos;,i] ## 修改header dfs.append(df) return dfs def main(): dfs = add_all_sheets(&apos;F:\\test\\table_group&apos;) df_merged = reduce(lambda left,right:pd.merge(left,right,on=[&apos;name&apos;],how=&apos;outer&apos;),dfs) print(df_merged) df_merged.to_csv(&apos;F:\\test\\all_merged.csv&apos;, sep=&apos;,&apos;, header=True, index=False)if __name__ == &apos;__main__&apos;: main() 输出结果]]></content>

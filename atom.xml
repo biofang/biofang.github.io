@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://biofang.github.io/"/>
-  <updated>2024-01-15T13:10:58.968Z</updated>
+  <updated>2021-04-30T02:41:53.041Z</updated>
   <id>https://biofang.github.io/</id>
   
   <author>
@@ -15,30 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>TEST.txt</title>
-    <link href="https://biofang.github.io/2024/01/15/TEST-txt/"/>
-    <id>https://biofang.github.io/2024/01/15/TEST-txt/</id>
-    <published>2024-01-15T13:10:13.000Z</published>
-    <updated>2024-01-15T13:10:58.968Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="T1"><a href="#T1" class="headerlink" title="T1"></a>T1</h2><p>This is a test；</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;T1&quot;&gt;&lt;a href=&quot;#T1&quot; class=&quot;headerlink&quot; title=&quot;T1&quot;&gt;&lt;/a&gt;T1&lt;/h2&gt;&lt;p&gt;This is a test；&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="python" scheme="https://biofang.github.io/tags/python/"/>
-    
-  </entry>
   
   <entry>
     <title>利用Pandas合并excel中的sheets</title>
