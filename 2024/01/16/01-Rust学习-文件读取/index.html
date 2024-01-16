@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Rust,">
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="Chrome 插件 Saladict 沙拉查词   划词翻译  Adblock Plus   Chrono     infinity   SimpleUndoClose    Scholarscope">
+<meta name="description" content="简介使用Rust进行简单的文件读取操作。 一次性读入优点：  处理包含字符串内容的文件； 可以一次整体处理；  缺点：  过大的文件可能会对性能产生严重影响； 文件越大，程序内存消耗就越大； 某些文件不能处理，如二进制内容的文件不能以这种方式处理；123456789101112131415use std::env;use std::fs;fn main() &amp;#123;    let args:V">
+<meta name="keywords" content="Rust">
 <meta property="og:type" content="article">
-<meta property="og:title" content="效率工具集(不定期更新。。。)">
-<meta property="og:url" content="https://biofang.github.io/2019/12/19/效率工具集/index.html">
+<meta property="og:title" content="01.Rust学习-文件读取">
+<meta property="og:url" content="https://biofang.github.io/2024/01/16/01-Rust学习-文件读取/index.html">
 <meta property="og:site_name" content="Fang&#39;s Blog">
-<meta property="og:description" content="Chrome 插件 Saladict 沙拉查词   划词翻译  Adblock Plus   Chrono     infinity   SimpleUndoClose    Scholarscope">
+<meta property="og:description" content="简介使用Rust进行简单的文件读取操作。 一次性读入优点：  处理包含字符串内容的文件； 可以一次整体处理；  缺点：  过大的文件可能会对性能产生严重影响； 文件越大，程序内存消耗就越大； 某些文件不能处理，如二进制内容的文件不能以这种方式处理；123456789101112131415use std::env;use std::fs;fn main() &amp;#123;    let args:V">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-02T13:51:51.877Z">
+<meta property="og:updated_time" content="2024-01-16T13:54:40.192Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="效率工具集(不定期更新。。。)">
-<meta name="twitter:description" content="Chrome 插件 Saladict 沙拉查词   划词翻译  Adblock Plus   Chrono     infinity   SimpleUndoClose    Scholarscope">
+<meta name="twitter:title" content="01.Rust学习-文件读取">
+<meta name="twitter:description" content="简介使用Rust进行简单的文件读取操作。 一次性读入优点：  处理包含字符串内容的文件； 可以一次整体处理；  缺点：  过大的文件可能会对性能产生严重影响； 文件越大，程序内存消耗就越大； 某些文件不能处理，如二进制内容的文件不能以这种方式处理；123456789101112131415use std::env;use std::fs;fn main() &amp;#123;    let args:V">
 
 
 
@@ -121,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://biofang.github.io/2019/12/19/效率工具集/">
+  <link rel="canonical" href="https://biofang.github.io/2024/01/16/01-Rust学习-文件读取/">
 
 
 
 
 
-  <title>效率工具集(不定期更新。。。) | Fang's Blog</title>
+  <title>01.Rust学习-文件读取 | Fang's Blog</title>
   
 
 
@@ -296,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://biofang.github.io/2019/12/19/效率工具集/">
+    <link itemprop="mainEntityOfPage" href="https://biofang.github.io/2024/01/16/01-Rust学习-文件读取/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fangj">
@@ -313,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">效率工具集(不定期更新。。。)</h1>
+          <h1 class="post-title" itemprop="name headline">01.Rust学习-文件读取</h1>
         
 
         <div class="post-meta">
@@ -325,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-19T23:24:36+08:00">
-                2019-12-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-01-16T21:48:39+08:00">
+                2024-01-16
               </time>
             
 
@@ -348,8 +349,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
+                  <a href="/categories/Rust/" itemprop="url" rel="index">
+                    <span itemprop="name">Rust</span>
                   </a>
                 </span>
 
@@ -385,47 +386,31 @@
       
 
       
-        <h3 id="Chrome-插件"><a href="#Chrome-插件" class="headerlink" title="Chrome 插件"></a>Chrome 插件</h3><ul>
-<li><a href="https://saladict.crimx.com/" target="_blank" rel="noopener">Saladict 沙拉查词</a>  </li>
-<li><a href="https://github.com/Selection-Translator/crx-selection-translate#readme" target="_blank" rel="noopener">划词翻译</a> </li>
-<li><a href="https://adblockplus.org/" target="_blank" rel="noopener">Adblock Plus</a>  </li>
-<li><a href="https://chrome.google.com/webstore/detail/chrono/cdipjnbignkeledopgpgdlgbolhgkben" target="_blank" rel="noopener">Chrono</a>    </li>
-<li><a href="https://www.infinitynewtab.com/" target="_blank" rel="noopener">infinity</a>  </li>
-<li><a href="https://chrome.google.com/webstore/detail/simpleundoclose/emhohdghchmjepmigjojkehidlielknj" target="_blank" rel="noopener">SimpleUndoClose</a>   </li>
-<li><a href="https://www.scholarscope.cn/index.html" target="_blank" rel="noopener">Scholarscope</a>  <a id="more"></a>
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>使用Rust进行简单的文件读取操作。</p>
+<h3 id="一次性读入"><a href="#一次性读入" class="headerlink" title="一次性读入"></a>一次性读入</h3><p><strong>优点：</strong></p>
+<ul>
+<li>处理包含字符串内容的文件；</li>
+<li>可以一次整体处理；</li>
+</ul>
+<p><strong>缺点：</strong></p>
+<ul>
+<li>过大的文件可能会对性能产生严重影响；</li>
+<li>文件越大，程序内存消耗就越大；</li>
+<li>某些文件不能处理，如二进制内容的文件不能以这种方式处理；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">use std::env;</span><br><span class="line">use std::fs;</span><br><span class="line"></span><br><span class="line">fn main() &#123;</span><br><span class="line">    let args:Vec&lt;String&gt;= env::args().collect();</span><br><span class="line"></span><br><span class="line">    let fpath = &amp;args[1];</span><br><span class="line"></span><br><span class="line">    let contents:String = fs::read_to_string(fpath)</span><br><span class="line">        .expect(&quot;读取文件失败&quot;);</span><br><span class="line"></span><br><span class="line">    for line in contents.lines() &#123;</span><br><span class="line">        println!(&quot;&#123;&#125;&quot;,line);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="优秀软件"><a href="#优秀软件" class="headerlink" title="优秀软件"></a>优秀软件</h3><ul>
-<li><a href="https://www.voidtools.com/zh-cn/" target="_blank" rel="noopener">Everything</a>    </li>
-<li><a href="https://u.tools/" target="_blank" rel="noopener">uTools</a>  </li>
-<li><a href="https://yuanliao.info/t/plugins" target="_blank" rel="noopener">uTools第三方插件</a>  </li>
-<li><a href="https://zh.snipaste.com/" target="_blank" rel="noopener">Snipaste</a>    </li>
-<li><a href="https://www.faststone.org/FSCaptureDetail.htm" target="_blank" rel="noopener">FastStone Capture</a>  </li>
-<li><a href="https://copytranslator.github.io/" target="_blank" rel="noopener">CopyTranslator</a>  </li>
-<li><a href="http://www.9312.net/download.html" target="_blank" rel="noopener">SCI-HUB文献神器</a>  </li>
-<li><a href="https://sunlogin.oray.com/personal/" target="_blank" rel="noopener">向日葵</a>  </li>
-<li><a href="https://powerkeys.github.io/" target="_blank" rel="noopener">Power Keys</a>  </li>
-<li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a>  </li>
-<li><a href="https://tamlok.github.io/vnote/zh_cn/" target="_blank" rel="noopener">VNote</a>    </li>
-<li><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>    </li>
-<li><a href="https://www.screentogif.com/" target="_blank" rel="noopener">ScreenToGif</a>  </li>
-<li><a href="http://1218.io/" target="_blank" rel="noopener">Seer</a>  </li>
-<li><a href="https://ditto-cp.sourceforge.io/" target="_blank" rel="noopener">Ditto</a>    </li>
-<li><a href="https://www.chuyu.me/zh-Hans/" target="_blank" rel="noopener">Dism++</a>  </li>
-<li><a href="https://www.ccleaner.com/" target="_blank" rel="noopener">CCleaner</a>  </li>
-<li><a href="https://github.com/Tyrrrz/LightBulb" target="_blank" rel="noopener">LightBulb</a>  </li>
-<li><a href="https://potplayer.daum.net/" target="_blank" rel="noopener">PotPlayer</a>    </li>
-<li><a href="https://github.com/atom/atom" target="_blank" rel="noopener">Atom</a>  </li>
-<li><a href="https://www.sublimetext.com/" target="_blank" rel="noopener">Sublime Text 3</a>  </li>
+<a id="more"></a>
+<h3 id="按行读取"><a href="#按行读取" class="headerlink" title="按行读取"></a>按行读取</h3><p>Rust在其标准库提供的BufReader方法，它是在Reader方法基础之上进行了一些细节优化，这种方法可以处理以下特点的文件：</p>
+<ul>
+<li>包含字符串内容的文件</li>
+<li>不能一次处理太大的文件<br>然而，这种方法也有一些缺点：</li>
+<li>它只适用于字符串内容的文件；</li>
+<li>实现可能很快变得更加复杂；</li>
+<li>根据文件的格式，如果不是要处理的所有内容都放在同一行，则可能需要自己缓冲行；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">use std::io::&#123; stdin, BufRead, BufReader&#125;;</span><br><span class="line">use std::env;</span><br><span class="line">use std::fs::File;</span><br><span class="line">use std::path::Path;</span><br><span class="line"></span><br><span class="line">fn main() &#123;</span><br><span class="line">    let args:Vec&lt;String&gt; = env::args().collect();</span><br><span class="line"></span><br><span class="line">    let read_from : Box&lt;dyn BufRead&gt; = if args.len() &gt; 1 &#123;</span><br><span class="line">        let fpath = args.get(1).expect(&quot;cannot get argument!&quot;);</span><br><span class="line">        let file = File::open(Path::new(fpath))</span><br><span class="line">            .expect(format!(&quot;cannot open&#123;&#125;&quot;,fpath).as_str());</span><br><span class="line">        Box::new(BufReader::new(file))</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        Box::new(BufReader::new(stdin()))</span><br><span class="line">        // Box::new(stdin().lock())</span><br><span class="line">    &#125;;</span><br><span class="line">    for line in read_from.lines() &#123;</span><br><span class="line">        let line = line.unwrap();</span><br><span class="line"></span><br><span class="line">        println!(&quot;&#123;&#125;--&#123;&#125;&quot;,line,line.len());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="Office-插件"><a href="#Office-插件" class="headerlink" title="Office 插件"></a>Office 插件</h3><ul>
-<li><a href="http://oktools.xyz/" target="_blank" rel="noopener">OneKeyTools</a>  </li>
-<li><a href="https://www.islide.cc/" target="_blank" rel="noopener">iSlide</a>  </li>
-<li><a href="https://www.papocket.com/" target="_blank" rel="noopener">口袋动画</a>  </li>
-<li><a href="http://meihua.docer.com/" target="_blank" rel="noopener">PPT美化大师</a>   </li>
-<li><a href="https://addins.cn/yhtools/" target="_blank" rel="noopener">LvyhTools</a>  </li>
-<li><a href="https://easychart.github.io/post/Easycharts/" target="_blank" rel="noopener">EasyCharts</a>  </li>
-</ul>
+<p>对于生信方面，常用的也就是按行读取文件。当然读取文件还有其他方式，比如按字节块读取，以单个字节逐步读取等，这些方式在Rust中均能实现。</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://www.cnblogs.com/lilpig/p/16994665.html" target="_blank" rel="noopener">Rust Read、BufRead、BufReader</a><br><a href="https://llever.com/gentle-intro/3-filesystem.zh.html" target="_blank" rel="noopener">文件系统和进程</a></p>
 
       
     </div>
@@ -445,35 +430,6 @@
 	<div>
        
           
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2019/12/19/效率工具集/">效率工具集(不定期更新。。。)</a></p>
-  <p><span>文章作者:</span><a href="/" title="访问 Fangj 的个人博客">Fangj</a></p>
-  <p><span>发布时间:</span>2019年12月19日 - 23:12</p>
-  <p><span>最后更新:</span>2020年04月02日 - 21:04</p>
-  <p><span>原始链接:</span><a href="/2019/12/19/效率工具集/" title="效率工具集(不定期更新。。。)">https://biofang.github.io/2019/12/19/效率工具集/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://biofang.github.io/2019/12/19/效率工具集/" aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: '复制成功',
-          icon: "success", 
-          showConfirmButton: true
-          });
-	});
-    });  
-</script>
-
        
 	</div>
 	  
@@ -485,6 +441,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Rust/" rel="tag"><i class="fa fa-tag"></i> Rust</a>
+          
+        </div>
+      
 
       
       
@@ -494,8 +456,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/14/python赋值、浅拷贝和深拷贝/" rel="next" title="python赋值、浅拷贝和深拷贝">
-                <i class="fa fa-chevron-left"></i> python赋值、浅拷贝和深拷贝
+              <a href="/2021/04/30/利用Pandas合并excel中的sheets/" rel="next" title="利用Pandas合并excel中的sheets">
+                <i class="fa fa-chevron-left"></i> 利用Pandas合并excel中的sheets
               </a>
             
           </div>
@@ -503,10 +465,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/02/GO分类条形图/" rel="prev" title="GO分类条形图">
-                GO分类条形图 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -679,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome-插件"><span class="nav-number">1.</span> <span class="nav-text">Chrome 插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#优秀软件"><span class="nav-number">2.</span> <span class="nav-text">优秀软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Office-插件"><span class="nav-number">3.</span> <span class="nav-text">Office 插件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一次性读入"><span class="nav-number">2.</span> <span class="nav-text">一次性读入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#按行读取"><span class="nav-number">3.</span> <span class="nav-text">按行读取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
