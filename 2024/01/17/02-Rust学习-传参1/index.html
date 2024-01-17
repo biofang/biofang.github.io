@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Rust,">
 
 
 
@@ -81,13 +81,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Fang&#39;s Blog">
-<meta property="og:url" content="https://biofang.github.io/archives/2021/index.html">
+<meta name="description" content="简介Rust 是一种 静态编译的、快速的语言，具有出色的工具支持和迅速增长的生态系统，这使它非常适合编写命令行应用程序。在平时的生信分析中，大部分工具也是命令行形式。因此，从这个角度来说，Rust是非常适合应用于生信领域。作为一个命令行应用程序（CLI），最基本的要求是能够与外界进行参数传递。 获取参数一种方式是通过Rust标准库提供的std::env::args() 方法，提供了运行时给定参数的">
+<meta name="keywords" content="Rust">
+<meta property="og:type" content="article">
+<meta property="og:title" content="02.Rust学习-传参1">
+<meta property="og:url" content="https://biofang.github.io/2024/01/17/02-Rust学习-传参1/index.html">
 <meta property="og:site_name" content="Fang&#39;s Blog">
+<meta property="og:description" content="简介Rust 是一种 静态编译的、快速的语言，具有出色的工具支持和迅速增长的生态系统，这使它非常适合编写命令行应用程序。在平时的生信分析中，大部分工具也是命令行形式。因此，从这个角度来说，Rust是非常适合应用于生信领域。作为一个命令行应用程序（CLI），最基本的要求是能够与外界进行参数传递。 获取参数一种方式是通过Rust标准库提供的std::env::args() 方法，提供了运行时给定参数的">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2024-01-17T14:26:29.774Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Fang&#39;s Blog">
+<meta name="twitter:title" content="02.Rust学习-传参1">
+<meta name="twitter:description" content="简介Rust 是一种 静态编译的、快速的语言，具有出色的工具支持和迅速增长的生态系统，这使它非常适合编写命令行应用程序。在平时的生信分析中，大部分工具也是命令行形式。因此，从这个角度来说，Rust是非常适合应用于生信领域。作为一个命令行应用程序（CLI），最基本的要求是能够与外界进行参数传递。 获取参数一种方式是通过Rust标准库提供的std::env::args() 方法，提供了运行时给定参数的">
 
 
 
@@ -117,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://biofang.github.io/archives/2021/">
+  <link rel="canonical" href="https://biofang.github.io/2024/01/17/02-Rust学习-传参1/">
 
 
 
 
 
-  <title>归档 | Fang's Blog</title>
+  <title>02.Rust学习-传参1 | Fang's Blog</title>
   
 
 
@@ -142,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	<a href="https://github.com/biofang" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -278,72 +283,226 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 10 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2021">2021</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://biofang.github.io/2024/01/17/02-Rust学习-传参1/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Fangj">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/fig.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Fang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2021/04/30/利用Pandas合并excel中的sheets/" itemprop="url">
-              
-                <span itemprop="name">利用Pandas合并excel中的sheets</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">02.Rust学习-传参1</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2021-04-30T10:31:59+08:00" content="2021-04-30">
-          04-30
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-01-17T22:21:23+08:00">
+                2024-01-17
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Rust/" itemprop="url" rel="index">
+                    <span itemprop="name">Rust</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Rust 是一种 静态编译的、快速的语言，具有出色的工具支持和迅速增长的生态系统，这使它非常适合编写命令行应用程序。在平时的生信分析中，大部分工具也是命令行形式。因此，从这个角度来说，Rust是非常适合应用于生信领域。作为一个命令行应用程序（CLI），最基本的要求是能够与外界进行参数传递。</p>
+<h3 id="获取参数"><a href="#获取参数" class="headerlink" title="获取参数"></a>获取参数</h3><p>一种方式是通过Rust标准库提供的std::env::args() 方法，提供了运行时给定参数的迭代器。<br>另一种是当前最受欢迎的解析命令行参数的库clap。</p>
+<h4 id="args用法"><a href="#args用法" class="headerlink" title="args用法"></a>args用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">fn main() &#123;</span><br><span class="line">    let pattern = std::env::args().nth(1).expect(&quot;no pattern given&quot;);</span><br><span class="line">    let path = std::env::args().nth(2).expect(&quot;no path given&quot;);</span><br><span class="line">    // 直接返回迭代器中相应位置的元素；</span><br><span class="line">    println!(&quot;&#123;&#125;,&#123;&#125;&quot;,pattern,path);</span><br><span class="line"></span><br><span class="line">    let args:Vec&lt;String&gt; = std::env::args().collect();</span><br><span class="line">    // 将迭代器转换为一个集合</span><br><span class="line">    dbg!(args);</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">    $ cargo run  --  test  tmp.txt</span><br><span class="line">    test,tmp.txt</span><br><span class="line">    [src\main.rs:12] args = [</span><br><span class="line">    &quot;target\\debug\\learn_env.exe&quot;,</span><br><span class="line">    &quot;test&quot;,</span><br><span class="line">    &quot;tmp.txt&quot;,</span><br><span class="line">    ]</span><br><span class="line">     */</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="clap用法"><a href="#clap用法" class="headerlink" title="clap用法"></a>clap用法</h4><p>使用clap库前，需要提前导入clap库。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 方法一</span><br><span class="line">cargo add clap --features derive</span><br><span class="line"># 方法二</span><br><span class="line">直接在Cargo.toml中添加</span><br><span class="line">clap = &#123; version = &quot;4.4.18&quot;, features = [&quot;derive&quot;] &#125;</span><br><span class="line"># 默认情况下，所有的 feature 都会被自动禁用;</span><br><span class="line"># 以上配置为 clap 依赖开启了 derive feature;</span><br></pre></td></tr></table></figure></p>
+<p>简单案例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">use clap::Parser;</span><br><span class="line"></span><br><span class="line">fn main() &#123;</span><br><span class="line"></span><br><span class="line">    let args = Cli::parse();</span><br><span class="line"></span><br><span class="line">    println!(&quot;&#123;&#125;,&#123;&#125;&quot;,args.pattern,args.path);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/// 在文件中搜索并显示包含它的行；</span><br><span class="line">#[derive(Parser)]</span><br><span class="line">struct Cli &#123;</span><br><span class="line">    /// 要查找的模式</span><br><span class="line">    #[arg(short = &apos;s&apos;, long = &quot;pattern&quot;)]</span><br><span class="line">    pattern: String,</span><br><span class="line">    /// 要读取的文件路径</span><br><span class="line">    #[arg(short = &apos;p&apos;, long = &quot;path&quot;)]</span><br><span class="line">    path: String,</span><br><span class="line">&#125;</span><br><span class="line">/*</span><br><span class="line">$ cargo run  --  -h</span><br><span class="line">    Finished dev [unoptimized + debuginfo] target(s) in 0.08s</span><br><span class="line">     Running `target\debug\learn_env.exe -h`</span><br><span class="line">在文件中搜索模式并显示包含它的行；</span><br><span class="line"></span><br><span class="line">Usage: learn_struct.exe --pattern &lt;PATTERN&gt; --path &lt;PATH&gt;</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  -s, --pattern &lt;PATTERN&gt;  要查找的模式</span><br><span class="line">  -p, --path &lt;PATH&gt;        要读取的文件路径</span><br><span class="line">  -h, --help               Print help</span><br><span class="line"></span><br><span class="line">  很简单的，就可以打印出漂亮的帮助信息</span><br><span class="line"> */</span><br></pre></td></tr></table></figure></p>
+<p>clap 还有更详细的配置信息，比如子命令模式等，下次再进一步学习。毕竟现在的目标是快速上手Rust，边实战边学习。</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="https://docs.rs/clap/4.2.1/clap/index.html" target="_blank" rel="noopener">Crate clap</a><br><a href="https://kaisery.github.io/trpl-zh-cn/ch12-03-improving-error-handling-and-modularity.html" target="_blank" rel="noopener">Rust 程序设计语言 简体中文版</a></p>
+
+      
     </div>
+    
+    
+    
+	
+    <div>
+       <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    </div>
+	
+	
+	<div>
+       
+          
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2024/01/17/02-Rust学习-传参1/">02.Rust学习-传参1</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Fangj 的个人博客">Fangj</a></p>
+  <p><span>发布时间:</span>2024年01月17日 - 22:01</p>
+  <p><span>最后更新:</span>2024年01月17日 - 22:01</p>
+  <p><span>原始链接:</span><a href="/2024/01/17/02-Rust学习-传参1/" title="02.Rust学习-传参1">https://biofang.github.io/2024/01/17/02-Rust学习-传参1/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://biofang.github.io/2024/01/17/02-Rust学习-传参1/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+	});
+    });  
+</script>
+
+       
+	</div>
+	  
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Rust/" rel="tag"><i class="fa fa-tag"></i> Rust</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2024/01/16/01-Rust学习-文件读取/" rel="next" title="01.Rust学习-文件读取">
+                <i class="fa fa-chevron-left"></i> 01.Rust学习-文件读取
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -351,6 +510,9 @@
 
 
           
+
+  
+
         </div>
         
           
@@ -370,8 +532,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -468,6 +639,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取参数"><span class="nav-number">2.</span> <span class="nav-text">获取参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#args用法"><span class="nav-number">2.1.</span> <span class="nav-text">args用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clap用法"><span class="nav-number">2.2.</span> <span class="nav-text">clap用法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -632,6 +819,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
