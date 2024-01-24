@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="R,">
+  <meta name="keywords" content="Rust,">
 
 
 
@@ -81,20 +81,18 @@
 
 
 
-<meta name="description" content="R 绘图脚本123456789101112131415161718rm(list = ls())library(ggplot2)windowsFonts(myFont = windowsFont(&amp;quot;Times New Roman&amp;quot;))setwd(&amp;quot;D:\\data\\kegg_go_class&amp;quot;)data &amp;lt;- read.table(&amp;quot;tes">
-<meta name="keywords" content="R">
+<meta name="description" content="1. 简介Option 是 Rust 语言中的一个枚举类型，它表示一个值可能存在，也可能不存在的情况。在Rust中没有空值null关键字，而改为使用Option枚举来处理。通过这种方式，可以解决很多问题，比如判断一个值是否为空，避免空指针引用等。 Option 枚举包含两个成员，一个成员表示含有值：Some(T), 另一个表示没有值：None，定义如下：1234enum Option&amp;lt;T&amp;g">
+<meta name="keywords" content="Rust">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GO分类条形图">
-<meta property="og:url" content="https://biofang.github.io/2020/04/02/GO分类条形图/index.html">
+<meta property="og:title" content="03.Rust学习-解构Option">
+<meta property="og:url" content="https://biofang.github.io/2024/01/24/03-Rust学习-解构Option/index.html">
 <meta property="og:site_name" content="Fang&#39;s Blog">
-<meta property="og:description" content="R 绘图脚本123456789101112131415161718rm(list = ls())library(ggplot2)windowsFonts(myFont = windowsFont(&amp;quot;Times New Roman&amp;quot;))setwd(&amp;quot;D:\\data\\kegg_go_class&amp;quot;)data &amp;lt;- read.table(&amp;quot;tes">
+<meta property="og:description" content="1. 简介Option 是 Rust 语言中的一个枚举类型，它表示一个值可能存在，也可能不存在的情况。在Rust中没有空值null关键字，而改为使用Option枚举来处理。通过这种方式，可以解决很多问题，比如判断一个值是否为空，避免空指针引用等。 Option 枚举包含两个成员，一个成员表示含有值：Some(T), 另一个表示没有值：None，定义如下：1234enum Option&amp;lt;T&amp;g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2020/04/02/dIhn4NjaUqDfeps.png">
-<meta property="og:updated_time" content="2020-04-02T13:51:21.615Z">
+<meta property="og:updated_time" content="2024-01-24T14:29:21.411Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GO分类条形图">
-<meta name="twitter:description" content="R 绘图脚本123456789101112131415161718rm(list = ls())library(ggplot2)windowsFonts(myFont = windowsFont(&amp;quot;Times New Roman&amp;quot;))setwd(&amp;quot;D:\\data\\kegg_go_class&amp;quot;)data &amp;lt;- read.table(&amp;quot;tes">
-<meta name="twitter:image" content="https://i.loli.net/2020/04/02/dIhn4NjaUqDfeps.png">
+<meta name="twitter:title" content="03.Rust学习-解构Option">
+<meta name="twitter:description" content="1. 简介Option 是 Rust 语言中的一个枚举类型，它表示一个值可能存在，也可能不存在的情况。在Rust中没有空值null关键字，而改为使用Option枚举来处理。通过这种方式，可以解决很多问题，比如判断一个值是否为空，避免空指针引用等。 Option 枚举包含两个成员，一个成员表示含有值：Some(T), 另一个表示没有值：None，定义如下：1234enum Option&amp;lt;T&amp;g">
 
 
 
@@ -124,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://biofang.github.io/2020/04/02/GO分类条形图/">
+  <link rel="canonical" href="https://biofang.github.io/2024/01/24/03-Rust学习-解构Option/">
 
 
 
 
 
-  <title>GO分类条形图 | Fang's Blog</title>
+  <title>03.Rust学习-解构Option | Fang's Blog</title>
   
 
 
@@ -299,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://biofang.github.io/2020/04/02/GO分类条形图/">
+    <link itemprop="mainEntityOfPage" href="https://biofang.github.io/2024/01/24/03-Rust学习-解构Option/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Fangj">
@@ -316,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">GO分类条形图</h1>
+          <h1 class="post-title" itemprop="name headline">03.Rust学习-解构Option</h1>
         
 
         <div class="post-meta">
@@ -328,8 +326,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-02T21:24:51+08:00">
-                2020-04-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-01-24T22:23:31+08:00">
+                2024-01-24
               </time>
             
 
@@ -351,8 +349,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/生信/" itemprop="url" rel="index">
-                    <span itemprop="name">生信</span>
+                  <a href="/categories/Rust/" itemprop="url" rel="index">
+                    <span itemprop="name">Rust</span>
                   </a>
                 </span>
 
@@ -388,10 +386,21 @@
       
 
       
-        <h3 id="R-绘图脚本"><a href="#R-绘图脚本" class="headerlink" title="R 绘图脚本"></a>R 绘图脚本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">rm(list = ls())</span><br><span class="line">library(ggplot2)</span><br><span class="line">windowsFonts(myFont = windowsFont(&quot;Times New Roman&quot;))</span><br><span class="line">setwd(&quot;D:\\data\\kegg_go_class&quot;)</span><br><span class="line">data &lt;- read.table(&quot;test.DESeq2.goClass.xls.counts&quot;,sep=&apos;\t&apos;,header = T)</span><br><span class="line">pdf(file=&quot;test.DESeq2.goClass.pdf&quot;,width=10,height=10)</span><br><span class="line">dorder = factor(as.integer(rownames(data)),labels=data$GO_term) #对数据按GO_term排序</span><br><span class="line">ggplot(data,aes(x=GO_term,y=Number_of_Genes,fill=GO_category))  +   #定义X轴，Y轴的数据和颜色填充</span><br><span class="line">  geom_bar(stat=&quot;identity&quot;,position=position_dodge(0.7),width=0.8,aes(x=dorder))  + #定义柱形图的宽度和间距</span><br><span class="line">  coord_flip() +  #转换横纵坐标</span><br><span class="line">  ylim(0,600) +</span><br><span class="line">  scale_fill_discrete(name=&quot;GO category&quot;) + #修改legend的tittle</span><br><span class="line">  theme_bw() +</span><br><span class="line">  theme(panel.grid =element_blank(),axis.text=element_text(size = 10,face = &quot;bold&quot;)) + </span><br><span class="line">  geom_text(mapping = aes(label = Number_of_Genes),size = 4,hjust = -0.5) +</span><br><span class="line">  ylab(&quot;Number of genes&quot;)  +#修改X轴标签</span><br><span class="line">  xlab(&quot;&quot;)</span><br><span class="line">dev.off()</span><br></pre></td></tr></table></figure>
-<h3 id="绘图结果"><a href="#绘图结果" class="headerlink" title="绘图结果"></a>绘图结果</h3><p><img src="https://i.loli.net/2020/04/02/dIhn4NjaUqDfeps.png" alt="image.png"></p>
-<a id="more"></a>
-<h3 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">GO_term	GO_category	Number_of_Genes</span><br><span class="line">Aging	Organismal Systems	42</span><br><span class="line">Excretory system	Organismal Systems	46</span><br><span class="line">Environmental adaptation	Organismal Systems	72</span><br><span class="line">Sensory system	Organismal Systems	78</span><br><span class="line">Circulatory system	Organismal Systems	80</span><br><span class="line">Digestive system	Organismal Systems	93</span><br><span class="line">Development	Organismal Systems	108</span><br><span class="line">Endocrine system	Organismal Systems	207</span><br><span class="line">Immune system	Organismal Systems	225</span><br><span class="line">Nervous system	Organismal Systems	246</span><br><span class="line">Biosynthesis of other secondary metabolites	Metabolism	6</span><br><span class="line">Xenobiotics biodegradation and metabolism	Metabolism	14</span><br><span class="line">Metabolism of terpenoids and polyketides	Metabolism	19</span><br><span class="line">Metabolism of cofactors and vitamins	Metabolism	23</span><br><span class="line">Energy metabolism	Metabolism	27</span><br><span class="line">Metabolism of other amino acids	Metabolism	28</span><br><span class="line">Overview	Metabolism	34</span><br><span class="line">Nucleotide metabolism	Metabolism	37</span><br><span class="line">Glycan biosynthesis and metabolism	Metabolism	40</span><br><span class="line">Amino acid metabolism	Metabolism	52</span><br><span class="line">Carbohydrate metabolism	Metabolism	56</span><br><span class="line">Lipid metabolism	Metabolism	78</span><br><span class="line">Transcription	Genetic Information Processing	7</span><br><span class="line">Replication and repair	Genetic Information Processing	9</span><br><span class="line">Translation	Genetic Information Processing	25</span><br><span class="line">Folding, sorting and degradation	Genetic Information Processing	55</span><br><span class="line">Membrane transport	Environmental Information Processing	9</span><br><span class="line">Signaling molecules and interaction	Environmental Information Processing	229</span><br><span class="line">Signal transduction	Environmental Information Processing	517</span><br><span class="line">Cellular community - prokaryotes	Cellular Processes	6</span><br><span class="line">Cell motility	Cellular Processes	47</span><br><span class="line">Cell growth and death	Cellular Processes	146</span><br><span class="line">Cellular community - eukaryotes	Cellular Processes	158</span><br><span class="line">Transport and catabolism	Cellular Processes	163</span><br></pre></td></tr></table></figure>
+        <h3 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h3><p>Option 是 Rust 语言中的一个枚举类型，它表示一个值可能存在，也可能不存在的情况。在Rust中没有空值<code>null</code>关键字，而改为使用Option枚举来处理。通过这种方式，可以解决很多问题，比如判断一个值是否为空，<code>避免空指针引用</code>等。</p>
+<p>Option 枚举包含两个成员，一个成员表示含有值：Some(T), 另一个表示没有值：None，定义如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">enum Option&lt;T&gt; &#123;</span><br><span class="line">    Some(T),</span><br><span class="line">    None,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>由于Option<t> 枚举被包含在<code>prelude</code> ( <code>prelude</code>属于 Rust 标准库，Rust 会将最常用的类型、函数等提前引入其中自动导入）中，在使用时不用提前导入，直接使用即可。</t></p>
+<h3 id="2-解构-Option"><a href="#2-解构-Option" class="headerlink" title="2. 解构 Option"></a>2. 解构 Option</h3><p>想获取 Option<t> 当中的T，可以有以下几种方式：<br><a id="more"></a></t></p>
+<h4 id="2-1-match"><a href="#2-1-match" class="headerlink" title="2.1. match"></a>2.1. match</h4><p>通过 match 表达式来判断 Option 中是否存在值，并进行相应的处理。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fn main() &#123;</span><br><span class="line">    let a = Some(10);</span><br><span class="line">    match a &#123;</span><br><span class="line">        Some(num) =&gt; println!(&quot;&#123;&#125;&quot;, num),</span><br><span class="line">        None =&gt; println!(&quot;&#123;&#125;&quot;, false)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-2-if-let"><a href="#2-2-if-let" class="headerlink" title="2.2. if let"></a>2.2. if let</h4><p>使用if-let 语法糖，在 if condition 的语法规则下，在 condition 部分进行 let 语句的模式解构，匹配上则执行 dosomething。if-let 和 match 的区别是，前者只关注某个感兴趣的特定分支，后者则必须完整匹配。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fn main() &#123;</span><br><span class="line">    let a = Some(10);</span><br><span class="line">    if let Some(num) = a &#123;</span><br><span class="line">        let b = 8;</span><br><span class="line">        let all = num + b;</span><br><span class="line">        println!(&quot;&#123;&#125;&quot;, all);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        println!(&quot;&#123;&#125;&quot;, false)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-3-unwrap"><a href="#2-3-unwrap" class="headerlink" title="2.3. unwrap"></a>2.3. unwrap</h4><p>unwrap()方法不安全，但操作方便，如果目标值为 None，会引起 panic！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fn main() &#123;</span><br><span class="line">    let a = Some(10);</span><br><span class="line">    let a_value = a.unwrap();</span><br><span class="line">    println!(&quot;&#123;&#125;&quot;,a_value);   // 如果a为None时，会引发panic</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-4-unwrap-or"><a href="#2-4-unwrap-or" class="headerlink" title="2.4. unwrap_or"></a>2.4. unwrap_or</h4><p>相对unwrap()，较为安全。若是出现提取失败（目标为 None），则使用参数代替输出。<br>类似方法还有unwrap_or_else()，unwrap_or_default()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fn main() &#123;</span><br><span class="line">    // let a = Some(10);</span><br><span class="line">    let a = None;</span><br><span class="line">    let a_value = a.unwrap_or(100);</span><br><span class="line">    println!(&quot;&#123;&#125;&quot;,a_value);   // 输出默认值100</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-5-take"><a href="#2-5-take" class="headerlink" title="2.5. take"></a>2.5. take</h4><p>take方法可以从Option中取出值，并将 Option 中的值设置为 None，但原来的变量还有效（但实际上没什么用处了，因为只剩下None了），take方法的原始值或者引用必须为mut类型。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fn main() &#123;</span><br><span class="line">    let mut a: Option&lt;i32&gt; = Some(5);  // 去掉mut时报错；</span><br><span class="line">    let a_value = a.take();</span><br><span class="line">    println!(&quot;The value is &#123;:?&#125;&quot;, a);</span><br><span class="line">    println!(&quot;The new Option is &#123;:?&#125;&quot;, a_value);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// The value is None</span><br><span class="line">// The new Option is Some(5)</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h3><ul>
+<li>对于逻辑上会存在空值的变量，应该显式声明其类型为 Option<t>，否则应直接声明为 T 类型。</t></li>
+<li>不要轻易使用 unwrap 方法，它可能会导致程序发生 panic。因为 unwrap 方法是从 Option<t> 中提取出 T，若 T 的类型为 None，则会触发 panic。一定要用也推荐用 expect, 至少 panic 时会有错误信息。</t></li>
+<li>Option 包装的指针类型执行效率不会降低，即“零开销抽象”。</li>
+</ul>
+<h3 id="4-参考信息"><a href="#4-参考信息" class="headerlink" title="4. 参考信息"></a>4. 参考信息</h3><p><a href="https://doc.rust-lang.org/std/option/enum.Option.html" target="_blank" rel="noopener">Enum std::option::Option</a><br><a href="https://course.rs/basic/compound-type/enum.html" target="_blank" rel="noopener">Rust语言圣经(Rust Course)</a><br><a href="https://zhuanlan.zhihu.com/p/577413515" target="_blank" rel="noopener">Rust的模式解构 &amp; 再谈 Option 类型</a><br><a href="https://juejin.cn/post/7222787944296742967" target="_blank" rel="noopener">Rust语言从入门到精通系列 - Option特征那些事儿</a></p>
 
       
     </div>
@@ -417,12 +426,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2020/04/02/GO分类条形图/">GO分类条形图</a></p>
+  <p><span>本文标题:</span><a href="/2024/01/24/03-Rust学习-解构Option/">03.Rust学习-解构Option</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Fangj 的个人博客">Fangj</a></p>
-  <p><span>发布时间:</span>2020年04月02日 - 21:04</p>
-  <p><span>最后更新:</span>2020年04月02日 - 21:04</p>
-  <p><span>原始链接:</span><a href="/2020/04/02/GO分类条形图/" title="GO分类条形图">https://biofang.github.io/2020/04/02/GO分类条形图/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://biofang.github.io/2020/04/02/GO分类条形图/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2024年01月24日 - 22:01</p>
+  <p><span>最后更新:</span>2024年01月24日 - 22:01</p>
+  <p><span>原始链接:</span><a href="/2024/01/24/03-Rust学习-解构Option/" title="03.Rust学习-解构Option">https://biofang.github.io/2024/01/24/03-Rust学习-解构Option/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://biofang.github.io/2024/01/24/03-Rust学习-解构Option/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -453,7 +462,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/R/" rel="tag"><i class="fa fa-tag"></i> R</a>
+            <a href="/tags/Rust/" rel="tag"><i class="fa fa-tag"></i> Rust</a>
           
         </div>
       
@@ -466,8 +475,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/19/效率工具集/" rel="next" title="效率工具集(不定期更新。。。)">
-                <i class="fa fa-chevron-left"></i> 效率工具集(不定期更新。。。)
+              <a href="/2024/01/17/02-Rust学习-传参1/" rel="next" title="02.Rust学习-传参1">
+                <i class="fa fa-chevron-left"></i> 02.Rust学习-传参1
               </a>
             
           </div>
@@ -475,10 +484,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/02/kaks计算/" rel="prev" title="kaks计算">
-                kaks计算 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -651,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#R-绘图脚本"><span class="nav-number">1.</span> <span class="nav-text">R 绘图脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#绘图结果"><span class="nav-number">2.</span> <span class="nav-text">绘图结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试数据"><span class="nav-number">3.</span> <span class="nav-text">测试数据</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-简介"><span class="nav-number">1.</span> <span class="nav-text">1. 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-解构-Option"><span class="nav-number">2.</span> <span class="nav-text">2. 解构 Option</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-match"><span class="nav-number">2.1.</span> <span class="nav-text">2.1. match</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-if-let"><span class="nav-number">2.2.</span> <span class="nav-text">2.2. if let</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-unwrap"><span class="nav-number">2.3.</span> <span class="nav-text">2.3. unwrap</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-unwrap-or"><span class="nav-number">2.4.</span> <span class="nav-text">2.4. unwrap_or</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-take"><span class="nav-number">2.5.</span> <span class="nav-text">2.5. take</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-总结"><span class="nav-number">3.</span> <span class="nav-text">3. 总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-参考信息"><span class="nav-number">4.</span> <span class="nav-text">4. 参考信息</span></a></li></ol></div>
             
 
           </div>

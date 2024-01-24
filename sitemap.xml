@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://biofang.github.io/2024/01/24/03-Rust%E5%AD%A6%E4%B9%A0-%E8%A7%A3%E6%9E%84Option/</loc>
+    
+    <lastmod>2024-01-24T14:29:21.411Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://biofang.github.io/2024/01/17/02-Rust%E5%AD%A6%E4%B9%A0-%E4%BC%A0%E5%8F%821/</loc>
     
     <lastmod>2024-01-17T14:26:29.774Z</lastmod>
